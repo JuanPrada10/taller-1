@@ -7,9 +7,10 @@ int main()
     bool datosIncorrectos = false;
     float salarioPersona, numeroHijos, impuesto;
     float salarioMinimo = 1000000;
-
+// hacemos do while para comprobar los datos ingresados
     do
     {
+// condicional para mostrar el mensaje
         if (datosIncorrectos == true)
             cout << "datos incorrectos,vuelva a intentar\n";
 
@@ -19,12 +20,14 @@ int main()
         cin >> salarioPersona;
         cout << "Ingrese cuantos hijos tiene\n";
         cin >> numeroHijos;
+// declaramos como true a datosIncorrectos por si el while se cumple
         datosIncorrectos = true;
     } while (salarioPersona < 0 || numeroHijos < 0 || numeroHijos > 15);
-
+// hacemos un condicional para cada condicion que nos pide el problema
     if (salarioPersona <= salarioMinimo && numeroHijos > 0)
     {
         cout << "usted no paga el impuesto \n * valor a pagar: 0 \n * descuento: " + to_string(impuesto);
+// ponemos un return 0 para que el programa finalice si es esta la condicion que se cumple y asi para cada if
         return 0;
     }
     if (salarioPersona == salarioMinimo && numeroHijos == 0)
