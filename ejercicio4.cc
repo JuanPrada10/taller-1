@@ -11,7 +11,7 @@ int main()
         {
             cout << "datos incorrectos\n";
         }
-        cout << "Ingrese de que numero quire los multiplos \n";
+        cout << "Ingrese de que numero quiere los multiplos \n";
         cin >> multiplos;
         cout << "ingrese desde que numero quiere comenzar \n";
         cin >> inicio;
@@ -23,7 +23,7 @@ int main()
     for (int i = inicio + 1; i < final; i++)
     {
         if (i % multiplos == 0)
-            cout << to_string(i) + "\n";
+            cout << i << '\n';
     }
 
     return 0;
